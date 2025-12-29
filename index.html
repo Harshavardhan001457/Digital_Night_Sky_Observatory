@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Pulse | Real-Time Sky Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-space-black text-white font-inter overflow-x-hidden">
+
+    <div id="stars"></div>
+    <div id="stars2"></div>
+
+    <div class="container mx-auto px-6 py-10 relative z-10">
+        <header class="flex flex-col md:flex-row justify-between items-center mb-12 border-b border-white/10 pb-8">
+            <div>
+                <h1 class="font-space text-4xl font-bold tracking-tighter text-blue-400">CELESTIAL PULSE</h1>
+                <p class="text-gray-400 mt-1 uppercase tracking-widest text-xs">Simulated Orbital Tracking System</p>
+            </div>
+            <div class="text-right mt-6 md:mt-0">
+                <div id="live-clock" class="text-3xl font-mono font-bold text-white tracking-widest">00:00:00</div>
+                <p id="observer-loc" class="text-blue-300/80 text-sm italic">Observer Location: 37.77° N (Simulated)</p>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="dashboard-grid">
+            </div>
+
+        <footer class="mt-12 p-6 glass-card rounded-2xl flex flex-wrap justify-around text-center gap-4">
+            <div>
+                <p class="text-gray-500 text-xs uppercase tracking-widest">Atmospheric Clarity</p>
+                <p class="text-xl font-bold text-green-400">Optimum</p>
+            </div>
+            <div>
+                <p class="text-gray-500 text-xs uppercase tracking-widest">Light Pollution</p>
+                <p class="text-xl font-bold text-yellow-500">Bortle 4</p>
+            </div>
+            <div>
+                <p class="text-gray-500 text-xs uppercase tracking-widest">Active Satellites</p>
+                <p class="text-xl font-bold text-blue-400" id="sat-count">1,240</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
